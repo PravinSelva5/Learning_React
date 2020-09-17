@@ -2,6 +2,9 @@ import React from 'react';
 import HelloWorld from './Components/HelloWorld'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import Home from './Views/Home'
+import About from './Views/About'
+import Product from './Views/Product'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,28 +15,35 @@ import {
 
 function App() {
   return (
-    <div className="App">
-      <Header/> 
-      <HelloWorld name="Pravin"/>
-
+    <div>
       <Router>
-        <ul>
-          <li>
-            <Link to="/" className="text-blue-500">Home</Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-blue-500">About</Link>
-          </li>
-        </ul>
-      </Router>
+        
+          <Header/> 
+          <HelloWorld name="Pravin"/>
 
+         <div className="p-3">
+          <Switch>
+              <Route exact path="/">
+                  <Home/>
+              </Route>
 
+              <Route path="/about">
+                  <About/>
+              </Route>
 
-
-
-      
-      <Footer/>
+              <Route path="/products/:id">
+                  <Product/>
+              </Route>
+            </Switch>
+         </div>
+          
+          <Footer/>
+        
+        </Router>
+    
     </div>
+
+
   );
 }
 

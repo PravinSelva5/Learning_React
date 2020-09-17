@@ -8,13 +8,5 @@ class HelloWorld extends React.Component {
         )
     }
 }
-/*
-Function Based Approach:
 
-function HelloWorld1(props){
-    return(
-        <h1>Hello {props.name}</h1>
-    )
-}
-*/
 export default HelloWorld;
