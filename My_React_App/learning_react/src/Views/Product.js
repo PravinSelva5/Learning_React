@@ -28,7 +28,7 @@ function Product(){
                 error:false
             })
         })
-        .catch(error => {
+        .catch(() => {
             setProduct({
                 loading: false,
                 data: null,
@@ -38,6 +38,11 @@ function Product(){
 
     }, [url])
     
+    if(product.error){
+        content = <p>If there was an error, please refresh or try again later</p>
+    }
+
+
     if(product.loading){
         content = <Loader></Loader>
     }
