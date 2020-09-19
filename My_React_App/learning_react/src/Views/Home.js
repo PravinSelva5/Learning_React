@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Loader from '../Components/Loader'
 import ProductCard from '../Components/ProductCard'
-from ProductCard from './ProductCard'
 
 function Home() {
     const url =`https://5f62e6ca363f0000162d7cd7.mockapi.io/products?page=1&limit=10`
@@ -52,7 +51,9 @@ function Home() {
         content = 
             products.data.map((product, key) =>
             <div>
-                <ProductCard/>
+                <ProductCard
+                    product={product}
+                />
             </div>
             )
     }
