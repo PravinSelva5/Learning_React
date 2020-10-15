@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import "survey-react/survey.css";
+import "survey-react/survey.css"
 import * as Survey from "survey-react";
 class App extends Component {
   constructor(props) {

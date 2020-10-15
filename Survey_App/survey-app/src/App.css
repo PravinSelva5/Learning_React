@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.sv-root-modern .sv-footer__complete-btn{
+  background-color: black !important;
+}
