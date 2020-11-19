@@ -17,7 +17,7 @@ class App extends Component {
       isCompleted: true
     })
   }
-
+  
   render() {
     Survey
     .StylesManager
